@@ -1,0 +1,21 @@
+name: 'Action 1'
+description: 'Make a POST request with GitHub Action inputs to get wire@ url'
+inputs:
+  repo:
+    description: 'The repository name'
+    required: true
+  branch:
+    description: 'The branch name'
+    required: true
+  commit:
+    description: 'The commit hash'
+    required: true
+  state:
+    description: 'The state'
+    required: true
+outputs:
+  result:
+    description: 'wire@ url'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
