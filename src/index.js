@@ -10,6 +10,7 @@ async function run() {
     }
 
     const response = await axios.post('https://way-of-believers.vercel.app/checkData', reqBody);
+    console.log(response)
 
     core.setOutput('result', JSON.stringify(response.data));
   } catch (error) {

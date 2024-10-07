@@ -1,4 +1,4 @@
-name: 'Action 2'
+name: 'Action 2' 
 description: 'Make a POST request to get safe@ data'
 inputs:
   projectId:
