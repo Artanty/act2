@@ -1,21 +1,19 @@
-name: 'Action 1'
-description: 'Make a POST request with GitHub Action inputs to get wire@ url'
+name: 'Action 2'
+description: 'Make a POST request to get safe@ data'
 inputs:
-  repo:
-    description: 'The repository name'
+  projectId:
+    description: 'projectId'
     required: true
-  branch:
-    description: 'The branch name'
+  namespace:
+    description: 'namespace'
     required: true
-  commit:
-    description: 'The commit hash'
-    required: true
-  state:
-    description: 'The state'
-    required: true
+  stage:
+    description: 'stage'
+    required: false
+  
 outputs:
   result:
-    description: 'wire@ url'
+    description: 'safe@ data'
 runs:
   using: 'node16'
   main: 'dist/index.js'
