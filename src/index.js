@@ -3,17 +3,13 @@ const axios = require('axios');
 
 async function run() {
   try {
-    const repo = core.getInput('repo');
-    const branch = core.getInput('branch');
-    const commit = core.getInput('commit');
-    const state = core.getInput('state');
+    const reqBody = {
+      projectId: core.getInput('projectId'),
+      namespace: core.getInput('namespace'),
+      stage: 'DEPLOY'
+    }
 
-    const response = await axios.post('https://arms-dealer.vercel.app/get', {
-      repo,
-      branch,
-      commit,
-      state
-    });
+    const response = await axios.post('https://arms-dealer.vercel.app/get', reqBody);
 
     core.setOutput('result', JSON.stringify(response.data));
   } catch (error) {
