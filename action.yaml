@@ -10,6 +10,9 @@ inputs:
   stage:
     description: 'stage'
     required: false
+  commit:
+    description: 'commit'
+    required: false
   
 outputs:
   result:
