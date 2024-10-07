@@ -9,7 +9,7 @@ async function run() {
       stage: 'DEPLOY'
     }
 
-    const response = await axios.post('https://arms-dealer.vercel.app/get', reqBody);
+    const response = await axios.post('https://way-of-believers.vercel.app/checkData', reqBody);
 
     core.setOutput('result', JSON.stringify(response.data));
   } catch (error) {
